@@ -122,7 +122,39 @@ console.log('Total Shoppin cost is =', totalPrice)
 
 //Output: Total Shoppin cost is = 2800
 
-//------------------------ ----------------------------------------
+//------------------------Multi-Layer Discount Price Calculation --
+function layeredDiscount(quantity){
+    const first100Price = 100;
+    const second100Price = 90;
+    const above200Price = 70;
+
+    if (quantity <= 100){
+        const total = quantity * first100Price;
+        return total
+    } 
+    else if(quantity <=200){
+        const first100Total = 100 * first100Price;
+        const remainingQuantity = quantity -100;
+        const remaingTotal = remainingQuantity * second100Price;
+        const total = first100Total + remaingTotal
+
+        return total
+    }
+    else {
+        const first100Total = 100 * first100Price;
+        const second100Total = 100 * second100Price;
+        const remainingQuantity = quantity - 200;
+        const remaingTotal = remainingQuantity * above200Price;
+        const total = first100Total + second100Total + remaingTotal;
+
+        return total
+    }
+}
+
+const items = layeredDiscount(400)
+console.log('Total Price is:', items)
+
+//Result: Total Price is: 33000
 //------------------------ ----------------------------------------
 //------------------------ ----------------------------------------
 //------------------------ ----------------------------------------
