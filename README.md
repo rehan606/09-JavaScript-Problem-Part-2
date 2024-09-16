@@ -3,6 +3,7 @@
 
 <p align="center">Max number from array, cubix fit (cft) calculate, cheapest phone from array of phone objects, calculate the total cost of the product in a shopping cart, multi- Layer Discount price calculate..</p>
 
+
 <hr>
 
 <h2>Table Of Content:</h2>
